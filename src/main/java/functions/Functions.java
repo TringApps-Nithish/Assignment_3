@@ -46,8 +46,7 @@ public class Functions
 
     public void display()
     {
-        for (String studentName : student.keySet())
-            l.log(Level.INFO,()->studentName+" has "+student.get(studentName)+" GPA.");
+        student.forEach((key,value)-> l.log(Level.INFO,()->key+" has "+value+" GPA."));
     }
 
     private String calgpa(String grade)
