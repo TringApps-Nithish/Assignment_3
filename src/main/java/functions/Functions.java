@@ -18,7 +18,7 @@ public class Functions
 
     public void insert()
     {
-        l.info("\n Enter Student Name Followed by  Initial : ");
+        l.info("\n Enter Student Name (Starts with Initial) : ");
         name = sc.nextLine();
         l.info(" Grade Details .....");
         l.info("\n  A -> 4 Points \n  B -> 3 Points \n  C -> 2 Points \n  D -> 1 Point \n");
@@ -31,7 +31,7 @@ public class Functions
 
     public void upgpa()
     {
-        l.info("\n Enter Student Name Followed by  Initial : ");
+        l.info("\n Enter Student Name (Starts with Initial) : ");
         name = sc.nextLine();
         if(student.containsKey(name))
         {
