@@ -11,10 +11,4 @@ public class Assignvalues {
         grade = Grade;
         gpa = Gpa;
     }
-
-    public  String toString()
-    {
-        return "\n " + name + " has " + gpa + " GPA.";
-    }
-
 }
