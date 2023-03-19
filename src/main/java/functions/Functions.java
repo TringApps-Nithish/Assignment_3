@@ -8,7 +8,7 @@ import assigingvalues.Assignvalues;
 
 public class Functions
 {
-    public HashMap<String,String> Student = new HashMap<>();
+    private Map<String,String> student = new HashMap<>();
     private Scanner sc = new Scanner(System.in);
     private Logger l = Logger.getLogger("Functions");
     private String name;
@@ -26,19 +26,19 @@ public class Functions
         grade = sc.nextLine();
         gpa = calgpa(grade);
         new Assignvalues(name,grade,gpa);
-        Student.put(name, gpa);
+        student.put(name, gpa);
     }
 
     public void upgpa()
     {
         l.info("\n Enter Student Name Followed by  Initial : ");
         name = sc.nextLine();
-        if(Student.containsKey(name))
+        if(student.containsKey(name))
         {
             l.info("\n Enter your new grade: ");
             String newgrade = sc.next();
             gpa = calgpa(newgrade);
-            Student.replace(name, newgrade);
+            student.replace(name, newgrade);
         }
         else
             l.info(" Student Dose not Exists ...");
@@ -46,8 +46,8 @@ public class Functions
 
     public void display()
     {
-        for (String studentName : Student.keySet())
-            l.log(Level.INFO,()->studentName+" has "+Student.get(studentName)+" GPA.");
+        for (String studentName : student.keySet())
+            l.log(Level.INFO,()->studentName+" has "+student.get(studentName)+" GPA.");
     }
 
     private String calgpa(String grade)

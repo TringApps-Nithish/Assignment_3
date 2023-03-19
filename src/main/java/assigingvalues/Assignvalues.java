@@ -5,11 +5,11 @@ public class Assignvalues {
     private String name;
     private  String grade;
 
-    public Assignvalues(String Name,String Grade,String Gpa)
+    public Assignvalues(String studentName,String studentGrade,String studentGpa)
     {
-        name = Name;
-        grade = Grade;
-        gpa = Gpa;
+        name = studentName;
+        grade = studentGrade;
+        gpa = studentGpa;
 
     }
 }
